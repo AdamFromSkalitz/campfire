@@ -1,0 +1,232 @@
+@import "fire/fire";
+@import "colours/colours";
+@import "book/book";
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+$logo1: (
+  ($empty),
+  ($empty),
+  ($empty),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$b,$b,$b,$b,$b,$b,$b,$b,$b,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$b,$b,$b,$b,$b,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$b,$a,$a,$a,$a,$a,$b,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$b,$a,$t,$a,$t,$a,$b,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$b,$c,$t,$c,$b,$l,$t,$l,$b,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$b,$c,$c,$t,$b,$t,$l,$l,$b,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$b,$c,$c,$t,$l,$l,$b,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$b,$t,$b,$t,$b,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$b,$b,$b,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$b,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+);
+
+$fire7: (
+  ($empty),
+  ($empty),
+  ($empty),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+  ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
+);
+
+@function pixelize($colors, $size) {
+  $result: '';
+  $numRows: length($colors);
+
+  @for $rowIndex from 1 through $numRows {
+    $y: ($rowIndex - 1);
+    $row: nth($colors, $rowIndex);
+    $numCols: length($row);
+
+    /*If row is empty then make a row of transparents*/
+    /*@debug "ROW: #{$row}";*/
+    @if $row == "empty" {
+      @for $cellIndex from 1 through $columns{
+        $x: ($cellIndex - 1);
+        $sep: ', ';
+        @if $x == 0 and $y == 0 {
+          $sep: '';
+        }
+        $result: $result + '#{$sep}#{$x * $size} #{$y * $size} #{$t}'
+      }
+    }
+    @else{
+      @for $cellIndex from 1 through $numCols {
+        $x: ($cellIndex - 1);
+        $color: nth($row, $cellIndex);
+  
+        $sep: ', ';
+        @if $x == 0 and $y == 0 {
+          $sep: '';
+        }
+  
+        $result: $result + '#{$sep}#{$x * $size} #{$y * $size} #{$color}'
+      }
+    }
+  }
+
+  $result: unquote($result);
+  @return $result;
+}
+
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+
+#book{
+  position: relative;
+  width: calc(#{$columns} * #{$size});
+  height: calc(#{$rows} * #{$size});
+  
+  &::after,
+  &::before{
+    margin: 1rem;
+    width: $size;
+    height: $size;
+    content:'';
+    position: absolute;
+    background-color: black;
+    box-shadow: pixelize($bookOpening2, $size);
+  }
+
+  // &::after{
+  //   animation: animateFire .5s steps(1,end) infinite;
+  // }
+}
+
+@keyframes animateBook {
+  0%{
+    box-shadow: pixelize($book1, $size);
+  }
+  100% {
+    box-shadow: pixelize($book2, $size);
+  }
+}
+
+#logo{
+  position: relative;
+  width: calc(#{$columns} * #{$size});
+  height: calc(#{$rows} * #{$size});
+  &::after,
+  &::before{
+    margin: 1rem;
+    width: $size;
+    height: $size;
+    content:'';
+    position: absolute;
+    background-color: black;
+    box-shadow: pixelize($logo1, $size);
+  }
+
+  // &::after{
+  //   animation: animateFire .5s steps(1,end) infinite;
+  // }
+}
+
+#fire {
+  position: relative;
+  width: calc(#{$columns} * #{$size});
+  height: calc(#{$rows} * #{$size});
+  
+  &::after,
+  &::before{
+    margin: 1rem;
+    width: $size;
+    height: $size;
+    content:'';
+    position: absolute;
+    background-color: lightgray;
+    //box-shadow: pixelize($fire1, $size);
+  }
+
+
+  &::after{
+    animation: animateFire .5s steps(1,end) infinite;
+  }
+
+  // &::before{
+  // //   box-shadow: pixelize($fire1, $size);
+  //   box-shadow: 8px 8px var(--c)
+  // }
+}
+
+
+@keyframes animateFire {
+  0%{
+    box-shadow: pixelize($fire1, $size);
+  }
+  16% {
+    box-shadow: pixelize($fire2, $size);
+  }
+  32% {
+    box-shadow: pixelize($fire3, $size);
+  }
+  48% {
+    box-shadow: pixelize($fire4, $size);
+  }
+  64% {
+    box-shadow: pixelize($fire5, $size);
+  }
+  80% {
+    box-shadow: pixelize($fire6, $size);
+  }
+  100% {
+    box-shadow: pixelize($fire6, $size);
+  }
+}
