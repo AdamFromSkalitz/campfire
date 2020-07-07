@@ -1,6 +1,7 @@
 @import "fire/fire";
 @import "colours/colours";
 @import "book/book";
+@import "laptop/laptop";
 
 .column {
   float: left;
@@ -173,7 +174,6 @@ $fire7: (
     background-color: black;
     box-shadow: pixelize($logo1, $size);
   }
-
   // &::after{
   //   animation: animateFire .5s steps(1,end) infinite;
   // }
@@ -228,5 +228,44 @@ $fire7: (
   }
   100% {
     box-shadow: pixelize($fire6, $size);
+  }
+}
+
+
+#laptop {
+  position: relative;
+  width: calc(#{$columns} * #{$size});
+  height: calc(#{$rows} * #{$size});
+  
+  
+  &::after,
+  &::before{
+    margin: 1rem;
+    width: $size;
+    height: $size;
+    content:'';
+    position: absolute;
+    box-shadow: pixelize($laptop1, $size);
+  }
+}
+
+#laptop:hover{
+  &::after{
+    animation: animateLaptop .5s steps(1,end) forwards;
+  }
+}
+
+@keyframes animateLaptop {
+  0%{
+    box-shadow: pixelize($laptop1, $size);
+  }
+  50% {
+    box-shadow: pixelize($laptop2, $size);
+  }
+  75% {
+    box-shadow: pixelize($laptop3, $size);
+  }
+  100% {
+    box-shadow: pixelize($laptop4, $size);
   }
 }

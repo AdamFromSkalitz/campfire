@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "laptop.scss",
+        "../colours/colours.scss"
+    ],
+    "names": [],
+    "file": "laptop.css"
+}
