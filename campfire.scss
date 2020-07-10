@@ -143,7 +143,7 @@ $fire7: (
     content:'';
     position: absolute;
     background-color: black;
-    box-shadow: pixelize($bookOpening2, $size);
+    box-shadow: pixelize($bookOpening4, $size);
   }
 
   // &::after{
@@ -151,12 +151,45 @@ $fire7: (
   // }
 }
 
+#book1{
+  position: relative;
+  width: calc(#{$columns} * #{$size});
+  height: calc(#{$rows} * #{$size});
+  
+  &::after,
+  &::before{
+    margin: 1rem;
+    width: $size;
+    height: $size;
+    content:'';
+    position: absolute;
+    background-color: black;
+    //box-shadow: pixelize($bookOpening4, $size);
+  }
+
+  &::after{
+    animation: animateBook 5s steps(1,end) infinite;
+  }
+}
+
 @keyframes animateBook {
   0%{
-    box-shadow: pixelize($book1, $size);
+    box-shadow: pixelize($bookOpening1, $size);
+  }
+  20% {
+    box-shadow: pixelize($bookOpening2, $size);
+  }
+  40% {
+    box-shadow: pixelize($bookOpening3, $size);
+  }
+  60% {
+    box-shadow: pixelize($bookOpening4, $size);
+  }
+  80% {
+    box-shadow: pixelize($bookOpening5, $size);
   }
   100% {
-    box-shadow: pixelize($book2, $size);
+    box-shadow: pixelize($bookOpening5, $size);
   }
 }
 
@@ -252,6 +285,7 @@ $fire7: (
 #laptop:hover{
   &::after{
     animation: animateLaptop .5s steps(1,end) forwards;
+    animation-fill-mode: forwards;
   }
 }
 
