@@ -191,7 +191,7 @@ $fire7: (
   }
 
   &::after{
-    animation: animatePlant .5s steps(1,end) infinite;
+    animation: animatePlant 1s steps(1,end) infinite;
   }
 }
 
