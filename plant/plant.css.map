@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "plant.scss",
+        "../colours/colours.scss"
+    ],
+    "names": [],
+    "file": "plant.css"
+}

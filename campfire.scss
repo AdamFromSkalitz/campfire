@@ -2,7 +2,7 @@
 @import "colours/colours";
 @import "book/book";
 @import "laptop/laptop";
-
+@import "plant/plant";
 .column {
   float: left;
   width: 25%;
@@ -129,7 +129,6 @@ $fire7: (
 }
 
 
-
 #book{
   position: relative;
   width: calc(#{$columns} * #{$size});
@@ -143,32 +142,7 @@ $fire7: (
     content:'';
     position: absolute;
     background-color: black;
-    box-shadow: pixelize($bookOpening4, $size);
-  }
-
-  // &::after{
-  //   animation: animateFire .5s steps(1,end) infinite;
-  // }
-}
-
-#book1{
-  position: relative;
-  width: calc(#{$columns} * #{$size});
-  height: calc(#{$rows} * #{$size});
-  
-  &::after,
-  &::before{
-    margin: 1rem;
-    width: $size;
-    height: $size;
-    content:'';
-    position: absolute;
-    background-color: black;
-    //box-shadow: pixelize($bookOpening4, $size);
-  }
-
-  &::after{
-    animation: animateBook 5s steps(1,end) infinite;
+    //box-shadow: pixelize($bookOpening1, $size);
   }
 }
 
@@ -190,6 +164,52 @@ $fire7: (
   }
   100% {
     box-shadow: pixelize($bookOpening5, $size);
+  }
+}
+
+#book:hover{
+  &::after{
+    animation: animateBook .5s steps(1,end) forwards;
+    animation-fill-mode: both;
+  }
+}
+
+#plant{
+  position: relative;
+  width: calc(#{$columns} * #{$size});
+  height: calc(#{$rows} * #{$size});
+  
+  &::after,
+  &::before{
+    margin: 1rem;
+    width: $size;
+    height: $size;
+    content:'';
+    position: absolute;
+    background-color: black;
+    //box-shadow: pixelize($plantBoogie1, $size);
+  }
+
+  &::after{
+    animation: animatePlant .5s steps(1,end) infinite;
+  }
+}
+
+@keyframes animatePlant {
+  0%{
+    box-shadow: pixelize($plantBoogie1, $size);
+  }
+  25% {
+    box-shadow: pixelize($plantBoogie2, $size);
+  }
+  50% {
+    box-shadow: pixelize($plantBoogie3, $size);
+  }
+  75% {
+    box-shadow: pixelize($plantBoogie4, $size);
+  }
+  100% {
+    box-shadow: pixelize($bookOpening4, $size);
   }
 }
 
@@ -269,7 +289,6 @@ $fire7: (
   position: relative;
   width: calc(#{$columns} * #{$size});
   height: calc(#{$rows} * #{$size});
-  
   
   &::after,
   &::before{
