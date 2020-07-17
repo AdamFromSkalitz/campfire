@@ -126,23 +126,24 @@ $fire7: (
   }
 }
 
-.html {
-  height: 500px;
+body {
+  background: #5f6171;
 }
 
 grid-container {
   display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 30px;
   grid-template-columns: auto auto auto;
-  width: calc(#{$columns} * #{$size} * 3);
-  margin: auto;
-  transform: translateY(50%);
+  margin-top: 15%;
 }
 
 #person{
   //position: relative;
   width: calc(#{$columns} * #{$size});
   height: calc(#{$rows} * #{$size});
-  border: 1px solid #4CAF50;
+
   &::after,
   &::before{
     margin: 1rem;
@@ -159,7 +160,7 @@ grid-container {
   //position: relative;
   width: calc(#{$columns} * #{$size});
   height: calc(#{$rows} * #{$size});
-  
+  transform: scale(0.7);
   &::after,
   &::before{
     margin: 1rem;
@@ -200,10 +201,11 @@ grid-container {
 }
 
 #plant{
-  //position: relative;
+  position: relative;
   width: calc(#{$columns} * #{$size});
   height: calc(#{$rows} * #{$size});
-  
+  left: 80px;
+
   &::after,
   &::before{
     margin: 1rem;
@@ -287,10 +289,11 @@ grid-container {
 
 
 #laptop {
-  //position: relative;
+  position: relative;
   width: calc(#{$columns} * #{$size});
   height: calc(#{$rows} * #{$size});
-  
+  left: 80px;
+
   &::after,
   &::before{
     width: $size;
