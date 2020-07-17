@@ -3,10 +3,7 @@
 @import "book/book";
 @import "laptop/laptop";
 @import "plant/plant";
-.column {
-  float: left;
-  width: 25%;
-}
+@import "person/person";
 
 $logo1: (
   ($empty),
@@ -82,6 +79,7 @@ $fire7: (
   ($t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t,$t),
 );
 
+/*Borrowed from https://dev.to/jnschrag/creating-pixel-art-with-css-3451*/
 @function pixelize($colors, $size) {
   $result: '';
   $numRows: length($colors);
@@ -128,9 +126,37 @@ $fire7: (
   }
 }
 
+.html {
+  height: 500px;
+}
+
+grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: calc(#{$columns} * #{$size} * 3);
+  margin: auto;
+  transform: translateY(50%);
+}
+
+#person{
+  //position: relative;
+  width: calc(#{$columns} * #{$size});
+  height: calc(#{$rows} * #{$size});
+  border: 1px solid #4CAF50;
+  &::after,
+  &::before{
+    margin: 1rem;
+    width: $size;
+    height: $size;
+    content:'';
+    position: absolute;
+    box-shadow: pixelize($person1, $size);
+  }
+}
+
 
 #book{
-  position: relative;
+  //position: relative;
   width: calc(#{$columns} * #{$size});
   height: calc(#{$rows} * #{$size});
   
@@ -141,8 +167,7 @@ $fire7: (
     height: $size;
     content:'';
     position: absolute;
-    background-color: black;
-    //box-shadow: pixelize($bookOpening1, $size);
+    box-shadow: pixelize($bookOpening1, $size);
   }
 }
 
@@ -175,7 +200,7 @@ $fire7: (
 }
 
 #plant{
-  position: relative;
+  //position: relative;
   width: calc(#{$columns} * #{$size});
   height: calc(#{$rows} * #{$size});
   
@@ -186,7 +211,6 @@ $fire7: (
     height: $size;
     content:'';
     position: absolute;
-    background-color: black;
     //box-shadow: pixelize($plantBoogie1, $size);
   }
 
@@ -213,41 +237,18 @@ $fire7: (
   }
 }
 
-#logo{
-  position: relative;
-  width: calc(#{$columns} * #{$size});
-  height: calc(#{$rows} * #{$size});
-  &::after,
-  &::before{
-    margin: 1rem;
-    width: $size;
-    height: $size;
-    content:'';
-    position: absolute;
-    background-color: black;
-    box-shadow: pixelize($logo1, $size);
-  }
-  // &::after{
-  //   animation: animateFire .5s steps(1,end) infinite;
-  // }
-}
-
 #fire {
-  position: relative;
+  //position: relative;
   width: calc(#{$columns} * #{$size});
   height: calc(#{$rows} * #{$size});
-  
+
   &::after,
   &::before{
-    margin: 1rem;
     width: $size;
     height: $size;
     content:'';
     position: absolute;
-    background-color: lightgray;
-    //box-shadow: pixelize($fire1, $size);
   }
-
 
   &::after{
     animation: animateFire .5s steps(1,end) infinite;
@@ -286,13 +287,12 @@ $fire7: (
 
 
 #laptop {
-  position: relative;
+  //position: relative;
   width: calc(#{$columns} * #{$size});
   height: calc(#{$rows} * #{$size});
   
   &::after,
   &::before{
-    margin: 1rem;
     width: $size;
     height: $size;
     content:'';
